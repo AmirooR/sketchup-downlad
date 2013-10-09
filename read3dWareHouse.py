@@ -7,7 +7,7 @@ from sklearn.externals import joblib
 
 def downloadAllModels( query_word, num_pages):
 	for i in range(num_pages):
-		print 'Download page %d' % (i+1)
+		print 'Downloading page %d' % (i+1)
 		downloadModelWithPage( query_word, i)
 
 def downloadModelWithPage( query_word, num_page):
@@ -26,7 +26,7 @@ def downloadModelWithPage( query_word, num_page):
         		req2 = urllib2.Request(down_url)
         		response2 = urllib2.urlopen(req2)
         		filename = response2.info()['Content-Disposition'].split('filename=')[1][1:-1]
-        		print 'Downloading %.1f KB to %s' % (int(response2.info()['Content-Length'])/1000.0, filename)
+        		print 'Downloading %.1f KB to %s ...' % (int(response2.info()['Content-Length'])/1000.0, filename)
         		page = response2.read()
         		with open(filename,'wb') as f:
             			f.write(page)
