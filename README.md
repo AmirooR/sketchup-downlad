@@ -10,6 +10,7 @@ see [read3dWareHouse.py](https://github.com/AmirooR/sketchup-downlad/blob/master
 ### TODO'S
 
 * Progress bar
-* sequentail file writing
+* sequential file writing
 * better page handling
 * multiword queries
+* skip if filename found
