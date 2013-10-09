@@ -13,4 +13,4 @@ see [read3dWareHouse.py](https://github.com/AmirooR/sketchup-downlad/blob/master
 * sequential file writing
 * better page handling
 * multiword queries
-* skip if filename found
+* -skip if filename found-

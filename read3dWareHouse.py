@@ -4,6 +4,7 @@ import urllib2
 from bs4 import BeautifulSoup
 import numpy as np
 from sklearn.externals import joblib
+import os.path
 
 def downloadAllModels( query_word, num_pages):
 	for i in range(num_pages):
@@ -26,11 +27,14 @@ def downloadModelWithPage( query_word, num_page):
         		req2 = urllib2.Request(down_url)
         		response2 = urllib2.urlopen(req2)
         		filename = response2.info()['Content-Disposition'].split('filename=')[1][1:-1]
-        		print 'Downloading %.1f KB to %s ...' % (int(response2.info()['Content-Length'])/1000.0, filename)
-        		page = response2.read()
-        		with open(filename,'wb') as f:
-            			f.write(page)
+			if os.path.isfile(filename):
+				print 'File: %s already exists' % (filename)
+			else:
+        			print 'Downloading %.1f KB to %s ...' % (int(response2.info()['Content-Length'])/1000.0, filename)
+        			page = response2.read()
+        			with open(filename,'wb') as f:
+            				f.write(page)
 
 
 if __name__ == '__main__':
-	downloadAllModels('train',1)
+	downloadAllModels('train',3)
