@@ -2,7 +2,7 @@
 
 ---
 
-fetches google 3D warehouse models.
+Fetches google 3D warehouse models.
 see [read3dWareHouse.py](https://github.com/AmirooR/sketchup-downlad/blob/master/read3dWareHouse.py) for more information.
 
 	-- Amir Rahimi

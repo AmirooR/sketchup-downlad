@@ -53,4 +53,4 @@ def downloadModelWithPage( query_word, num_page):
 
 
 if __name__ == '__main__':
-	downloadAllModels('aeroplane',1)
+	downloadAllModels('train',3)
